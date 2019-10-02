@@ -143,5 +143,21 @@ articleDate.textContent = articleData.date;
 para1.textContent = articleData.firstParagraph;
 para2.textContent = articleData.secondParagraph; 
 para3.textContent = articleData.thirdParagraph;
-expandButton.textContent = 'Click for more';
+expandButton.textContent = 'Click Here';
+
+// adding expandButton event
+expandButton.addEventListener('click', event => {
+  console.log('button clicked', event.target)
+
+//turn it on
+article.classList.toggle('article-open');
+
+})
+
+return article;
+
 }
+
+data.forEach(dataMap => {
+  articles.appendChild(createArticles(dataMap));
+})
