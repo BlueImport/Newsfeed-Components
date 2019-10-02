@@ -132,4 +132,16 @@ article.appendChild(para2);
 article.appendChild(para3);
 article.appendChild(expandButton);
 
+// setting class names to elements
+article.classList.add('article')
+articleDate.classList.add('date')
+expandButton.classList.add('expandButton')
+
+// setting text content to elements
+articleTitle.textContent = articleData.title;
+articleDate.textContent = articleData.date;
+para1.textContent = articleData.firstParagraph;
+para2.textContent = articleData.secondParagraph; 
+para3.textContent = articleData.thirdParagraph;
+expandButton.textContent = 'Click for more';
 }
