@@ -41,6 +41,7 @@ const data = [
         Petrificus Totalus. So thirsty, deluminator firs’ years follow me 12 inches of parchment. Head Boy start-of-term banquet Cleansweep Seven 
         roaring lion hat. Unicorn blood crossbow mars is bright tonight, feast Norwegian Ridgeback. Come seek us where our voices sound, we cannot 
         sing above the ground, Ginny Weasley bright red. Fanged frisbees, phoenix tears good clean match.`
+        
   },
   {
     title: 'Robot vs Artifical Intelligence',
@@ -116,13 +117,6 @@ const data = [
   }
 ];
 
-/* 
-
-
-  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
-
-*/
-
 
 const articles = document.querySelector('.articles')
 
@@ -136,6 +130,7 @@ const para1 = document.createElement('p');
 const para2 = document.createElement('p');
 const para3 = document.createElement('p');
 const expandButton = document.createElement('span');
+const closeButton = document.createElement('button');
 
 // structuring of the elements
 article.appendChild(articleTitle);
@@ -144,11 +139,13 @@ article.appendChild(para1);
 article.appendChild(para2);
 article.appendChild(para3);
 article.appendChild(expandButton);
+article.appendChild(closeButton);
 
 // setting class names to elements
 article.classList.add('article')
 articleDate.classList.add('date')
 expandButton.classList.add('expandButton')
+
 
 // setting text content to elements
 articleTitle.textContent = articleData.title;
@@ -157,6 +154,7 @@ para1.textContent = articleData.firstParagraph;
 para2.textContent = articleData.secondParagraph; 
 para3.textContent = articleData.thirdParagraph;
 expandButton.textContent = 'Click Here';
+closeButton.textContent = "Mark As Read";
 
 // adding expandButton event
 expandButton.addEventListener('click', event => {
@@ -166,11 +164,11 @@ expandButton.addEventListener('click', event => {
 article.classList.toggle('article-open');
 
 })
-
+.0
 return article;
-
 }
 
+//map over data
 data.forEach(dataMap => {
   articles.appendChild(createArticles(dataMap));
 })
